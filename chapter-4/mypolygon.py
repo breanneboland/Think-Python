@@ -1,8 +1,10 @@
 from swampy.TurtleWorld import *
+import math
 
 world = TurtleWorld()
 bob = Turtle()
 print bob
+bob.delay = 0.1
 
 def square(t, length):
     for i in range(4):
@@ -17,8 +19,12 @@ def polygon(t, length, n):
 
 # Challenge 4,page 40; start here next time
 def circle(t, r):
-    circ = r * 2
+    circ = 2 * math.pi * r
+    n = 50
+    length = int(circ / n)
+    polygon(t, n, length)
 
 
 polygon(bob, 100, 7)
+circle(4, 5)
 wait_for_user()
