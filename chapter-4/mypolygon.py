@@ -3,7 +3,7 @@ import math
 
 world = TurtleWorld()
 bob = Turtle()
-print bob
+print(bob)
 bob.delay = 0.1
 
 def square(t, length):
@@ -25,6 +25,6 @@ def circle(t, r):
     polygon(t, n, length)
 
 
-polygon(bob, 100, 7)
+# polygon(bob, 100, 7)
 circle(4, 5)
 wait_for_user()
