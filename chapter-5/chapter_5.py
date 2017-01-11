@@ -31,4 +31,18 @@ def fermat_input_check():
 
     check_fermat(a, b, c, n)
 
-fermat_input_check()
+# fermat_input_check()
+
+# Exercise 5-4
+def is_triangle(a, b, c):
+    nums = [a, b, c]
+    nums.sort()
+    print(nums)
+    if nums[0] + nums[1] > nums[2]:
+        print("Yes")
+    else:
+        print("No")
+
+is_triangle(1, 1, 3)
+is_triangle(10, 10, 10)
+is_triangle(3, 2, 1)
