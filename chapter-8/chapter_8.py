@@ -39,8 +39,20 @@ def count(string, letter):
             count += 1
     print(count)
 
-count("banana", "a")
-count("chicken", "e")
-count("sad panda", "q")
+# count("banana", "a")
+# count("chicken", "e")
+# count("sad panda", "q")
 
 # Exercise 8-7
+sample_string = "banana"
+# print(sample_string.count("a"))
+
+# Exercise 8-8
+string_again = "121212hi121212"
+string_again_again = "     hello     "
+print(string_again.strip("12"))
+print(string_again_again.strip(" "))
+
+string1 = "this is a sample string I will replace things in"
+print(string1.replace("is", "declares"))
+print(string1.replace("i", "super pickles"))
