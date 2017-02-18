@@ -50,9 +50,32 @@ sample_string = "banana"
 # Exercise 8-8
 string_again = "121212hi121212"
 string_again_again = "     hello     "
-print(string_again.strip("12"))
-print(string_again_again.strip(" "))
+# print(string_again.strip("12"))
+# print(string_again_again.strip(" "))
 
 string1 = "this is a sample string I will replace things in"
-print(string1.replace("is", "declares"))
-print(string1.replace("i", "super pickles"))
+# print(string1.replace("is", "declares"))
+# print(string1.replace("i", "super pickles"))
+
+# Exercise 8-10
+def one_line_palindrome_tester(word):
+    if word == word[::-1]:
+        print("Yep, it's a palindrome.")
+    else:
+        print("Nope")
+
+# one_line_palindrome_tester("anana")
+# one_line_palindrome_tester("pickle")
+# one_line_palindrome_tester("tacocat")
+
+# Exercise 8-12
+def rotate_word(s, n):
+    future_word_in_list_form = []
+    for letter in s:
+        future_word_in_list_form.append((chr(ord(letter) + n)))
+    word_to_string = "".join(future_word_in_list_form)
+    print(word_to_string)
+
+rotate_word("pickle", 12)
+rotate_word("cat cat cat", 3)
+
