@@ -33,4 +33,36 @@ def print_words_with_no_e():
     percentage_without_e = words_without_e/word_counter
     print(percentage_without_e, "%")
 
-print_words_with_no_e()
+# print_words_with_no_e()
+
+# Exercise 9-3
+def avoids(word, str):
+    letter_list = list(str)
+    for letter in word:
+        if letter in letter_list:
+            print(False)
+            return
+
+    print(True)
+
+# avoids("cat", "pickle")
+# avoids("qwerty", "u")
+
+def avoids_with_prompt():
+    words = open("words.txt")
+    words_list_length = 0
+    for i, l in enumerate(words):
+        words_list_length += 1
+
+    letters = input("What letters shall we avoid?")
+    letters_list = list(letters)
+
+    for word in words:
+        for letter in word:
+            if letter in letters:
+                words_list_length -= 1
+            pass
+    print("It finished.")
+    print(words_list_length)
+
+avoids_with_prompt()
