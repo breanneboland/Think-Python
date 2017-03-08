@@ -1,3 +1,5 @@
+import string
+
 # Exercise 9-1
 def long_words():
     fin = open("words.txt")
@@ -65,4 +67,50 @@ def avoids_with_prompt():
     print("It finished.")
     print(words_list_length)
 
-avoids_with_prompt()
+# avoids_with_prompt()
+
+# Exercise 9-4
+def uses_only(word, letters):
+    letters_list = list(set(letters))
+    for char in word:
+        if char in letters_list:
+            pass
+        else:
+            print(False)
+            return
+    print(True)
+
+# uses_only("embers", "abc")
+# uses_only("embers", "embers")
+
+# Exercise 9-5
+def uses_all(word, letters):
+    letters_list = list(set(letters))
+    for letter in letters_list:
+        if letter in word:
+            pass
+        else:
+            print(False)
+            return
+    print(True)
+
+# uses_all("embers", "emb")
+# uses_all("embers", "pdq")
+
+# Exercise 9-6
+def is_abecedarian(word):
+    alphabet_list = list(string.ascii_lowercase)
+    index_last = 0
+    index_this = 0
+    for letter in word:
+        index_last = index_this
+        index_this = alphabet_list.index(letter)
+        if index_this < index_last:
+            print(False)
+            return
+        else:
+            pass
+    print(True)
+
+is_abecedarian("abecedarian")
+is_abecedarian("abcdefgzzz")
