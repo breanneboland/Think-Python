@@ -114,3 +114,5 @@ def is_abecedarian(word):
 
 is_abecedarian("abecedarian")
 is_abecedarian("abcdefgzzz")
+
+
