@@ -21,4 +21,38 @@ def capitalize_nested(list_strs):
         new_list.append(capitalize_all(item))
     print(new_list)
 
-capitalize_nested([["pig", "chicken"], ["hoot"]])
+# capitalize_nested([["pig", "chicken"], ["hoot"]])
+
+# Exercise 10-3
+def cumulative_sum(lst):
+    new_summed_list = []
+    temp_sum = 0
+    for item in lst:
+        temp_sum += item
+        new_summed_list.append(temp_sum)
+    print(new_summed_list)
+
+# cumulative_sum([1, 2, 3])
+# cumulative_sum([4, 1, 5])
+
+# Exercise 10-4
+def middle(lst):
+    last_index = len(lst) -1
+    new_list = []
+    new_list.append(lst[0])
+    new_list.append(lst[last_index])
+
+    print(new_list)
+
+# middle(["hi", "there", "oh", "cool"])
+# middle([1, 2, 3, 4, 5, 6])
+
+# Exercise 10-5
+def chop(lst):
+    last_index = len(lst) - 1
+    lst.pop(0)
+    lst.pop()
+    return(None)
+
+chop([1, 2, 3, 4])
+chop(["apple", "chicken", "purple", "shelf"])
