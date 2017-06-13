@@ -54,5 +54,21 @@ def chop(lst):
     lst.pop()
     return(None)
 
-chop([1, 2, 3, 4])
-chop(["apple", "chicken", "purple", "shelf"])
+# chop([1, 2, 3, 4])
+# chop(["apple", "chicken", "purple", "shelf"])
+
+# Exercise 10-6
+def is_sorted(lst):
+    last_item = lst[0]
+    lst_last_index = len(lst) - 1
+    for index, item in enumerate(lst):
+        if item >= last_item and index < lst_last_index:
+            pass
+            last_item = item
+        elif item > last_item and index == lst_last_index:
+            print(True)
+        else:
+            print(False)
+
+is_sorted([1, 2, 3])
+is_sorted(["a", "c", "b"])
