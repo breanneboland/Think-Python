@@ -70,5 +70,51 @@ def is_sorted(lst):
         else:
             print(False)
 
-is_sorted([1, 2, 3])
-is_sorted(["a", "c", "b"])
+# is_sorted([1, 2, 3])
+# is_sorted(["a", "c", "b"])
+
+# Exercise 10-7
+def is_anagram(a, b):
+    if len(a) != len(b):
+        return(False)
+
+    a_listed = list(a)
+    a_listed.sort()
+    b_listed = list(b)
+    b_listed.sort()
+    longest_length = 0
+
+    if len(a_listed) > len(b_listed):
+        longest_length = len(b_listed)
+    else:
+        longest_length = len(a_listed)
+
+    for i in range(longest_length):
+        if a_listed[i] == b_listed[i]:
+            pass
+        else:
+            return(False)
+
+    return(True)
+
+# is_anagram("ham", "hello")
+# is_anagram("canal", "canal")
+# is_anagram("tacocat", "cattaco")
+
+# Exercise 10-8
+def has_duplicates(a):
+    set_comparison = set(a)
+    if len(a) != len(set_comparison):
+        print("Dupes detected!")
+    else:
+        print("All unique!")
+
+# has_duplicates(["a", "b", "c", "d"])
+# has_duplicates([1, 1, 2, 3, 4])
+
+# Exercise 10-9
+def remove_duplicates(a):
+    set_version = set(a)
+    print(list(set_version))
+
+remove_duplicates(["a", "a", "c"])
