@@ -117,4 +117,31 @@ def remove_duplicates(a):
     set_version = set(a)
     print(list(set_version))
 
-remove_duplicates(["a", "a", "c"])
+# remove_duplicates(["a", "a", "c"])
+
+# Exercise 10-10
+def list_compare():
+    from timeit import default_timer as timer
+    words_file = open("words.txt")
+
+    time_1_start = timer()
+    words_list_1 = []
+    for line in words_file:
+        words_list_1.append(line)
+    time_1_end = timer()
+    words_1_time = time_1_end - time_1_start
+
+    time_2_start = timer()
+    words_list_2 = []
+    for line in words_file:
+        words_list_2 = words_list_2 + [line]
+    time_2_end = timer()
+    words_2_time = time_2_end - time_2_start
+
+    print("Time of append version: ", words_1_time, ", time of plus version: ", words_2_time)
+
+# list_compare()
+
+
+
+
